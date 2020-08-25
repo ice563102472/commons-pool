@@ -43,6 +43,52 @@ The <action> type attribute can be add,update,fix,remove.
     <title>Apache Commons Pool Release Notes</title>
   </properties>
   <body>
+  <release version="2.8.2" date="202Y-MM-DD" description="This is a maintenance release (Java 8).">
+    <action dev="ggregory" type="update" due-to="Dependabot">
+      Update spotbugs from 4.0.6 to 4.1.1 #37.
+    </action>
+    <action dev="ggregory" type="update" due-to="Dependabot">
+      Update actions/checkout from v2.3.1 to v2.3.2 #56.
+    </action>
+  </release>
+  <release version="2.8.1" date="2020-07-27" description="This is a maintenance release (Java 8).">
+    <action dev="ggregory" issue="POOL-386" type="fix" due-to="Phil Steitz, Mark Thomas">
+      Refactored EvictionTimer usage tracking to fix POOL-386 and handle abandoned pools. #32.
+    </action>
+    <action dev="ggregory" type="fix" due-to="Prodigysov, Gary Gregory">
+      [Javadoc] Add missing @throws comment in PoolUtils. #27.
+    </action>
+    <action dev="ggregory" issue="POOL-384" type="update" due-to="Gary Gregory">
+      Update optional library org.ow2.asm:asm-util from 7.2 to 8.0.1.
+    </action>
+    <action dev="ggregory" issue="POOL-385" type="add" due-to="scholzi100">
+      Added Automatic-Module-Name to support JPMS #31.
+    </action>
+    <action dev="ggregory" type="update" due-to="Gary Gregory">
+      Update site reports from org.apache.bcel:bcel 6.4.1 to 6.5.0.
+    </action>
+    <action dev="ggregory" type="update" due-to="Gary Gregory">
+      Update site reports from maven-pmd-plugin 3.12.0 to 3.13.0.
+    </action>
+    <action dev="ggregory" type="update" due-to="Gary Gregory">
+      Update build from biz.aQute.bnd:biz.aQute.bndlib 5.1.0 -> 5.1.2.
+    </action>
+    <action dev="ggregory" type="update" due-to="Dependabot">
+      Update actions/checkout from v1 to v2.3.1 #33.
+    </action>
+    <action dev="ggregory" type="update" due-to="Dependabot">
+      Update commons-parent from 50 to 51 #36.
+    </action>
+    <action dev="ggregory" type="update" due-to="Gary Gregory">
+      Update Checkstyle plugin from 3.0.0 to 3.1.1.
+    </action>
+    <action dev="ggregory" type="update" due-to="Gary Gregory">
+      Update JApiCmp from 0.14.1 to 0.14.3.
+    </action>
+    <action dev="ggregory" type="update" due-to="Gary Gregory">
+      Update animal-sniffer-maven-plugin from 1.16 to 1.19.
+    </action>
+  </release>
   <release version="2.8.0" date="2019-12-05" description="This is a maintenance release (Java 8).">
     <action dev="ggregory" issue="POOL-374" type="fix" due-to="Gary Gregory, Phil Steitz">
        org.apache.commons.pool2.impl.GenericKeyedObjectPool.returnObject(K, T) should throw IllegalStateException instead of NullPointerException when a key is not found in the pool map.
@@ -433,7 +479,7 @@ including bugfixes and test case improvements.">
 in high concurrency environments. Pools now provide a mechanism for tracking
 objects that have been borrowed from the pool but not returned. There have been
 numerous API changes to support these and other new features as well as to
-clarify behaviour and improve consistency across the API. This release requires
+clarify behavior and improve consistency across the API. This release requires
 JDK level 1.6 or above.">
     <action issue="POOL-211" dev="markt" type="add" due-to="Brad Koehn">
       Add support for proxy wrappers to ObjectPool and KeyedObjectPool. The
@@ -505,7 +551,7 @@ JDK level 1.6 or above.">
       remove deprecated code and unnecessary code.
     </action>
     <action dev="markt" type="update">
-      Introduce an Enum (WhenExhaustedAction) to control pool behaviour when no
+      Introduce an Enum (WhenExhaustedAction) to control pool behavior when no
       more objects are available to allocate.
     </action>
     <action dev="markt" type="update">

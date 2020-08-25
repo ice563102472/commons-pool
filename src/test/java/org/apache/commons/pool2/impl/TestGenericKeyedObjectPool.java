@@ -546,8 +546,8 @@ public class TestGenericKeyedObjectPool extends TestKeyedObjectPool {
     }
 
     /**
-     * Kicks off <code>numThreads</code> test threads, each of which will go
-     * through <code>iterations</code> borrow-return cycles with random delay
+     * Kicks off {@code numThreads} test threads, each of which will go
+     * through {@code iterations} borrow-return cycles with random delay
      * times &lt;= delay in between.
      *
      * @param <T>           Type of object in pool
@@ -1309,7 +1309,7 @@ public class TestGenericKeyedObjectPool extends TestKeyedObjectPool {
         Boolean.valueOf(System.getProperty("TestGenericKeyedObjectPool.display.thread.details", "false")).booleanValue();
     // To pass this to a Maven test, use:
     // mvn test -DargLine="-DTestGenericKeyedObjectPool.display.thread.details=true"
-    // @see http://jira.codehaus.org/browse/SUREFIRE-121
+    // @see https://issues.apache.org/jira/browse/SUREFIRE-121
 
     /*
      * Test multi-threaded pool access.
